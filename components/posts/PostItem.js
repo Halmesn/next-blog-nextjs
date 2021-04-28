@@ -15,7 +15,7 @@ export default function PostItem({ post }) {
 
   return (
     <li className={styles.post}>
-      <Link href={`/post/${slug}`}>
+      <Link href={`/posts/${slug}`}>
         <a>
           <div className={styles.image}>
             <Image
