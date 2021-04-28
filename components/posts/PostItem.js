@@ -18,7 +18,13 @@ export default function PostItem({ post }) {
       <Link href={`/post/${slug}`}>
         <a>
           <div className={styles.image}>
-            <Image src={imagePath} alt={title} width={300} height={200} />
+            <Image
+              src={imagePath}
+              alt={title}
+              width={300}
+              height={200}
+              layout="responsive"
+            />
           </div>
           <div className={styles.content}>
             <h3>{title}</h3>

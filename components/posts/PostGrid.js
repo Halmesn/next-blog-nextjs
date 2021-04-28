@@ -5,7 +5,7 @@ export default function PostGrid({ posts }) {
   return (
     <ul className={styles.grid}>
       {posts.map((post) => (
-        <PostItem post={post} />
+        <PostItem post={post} key={post.slug} />
       ))}
     </ul>
   );
