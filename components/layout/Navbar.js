@@ -6,12 +6,13 @@ import Link from 'next/link';
 export default function Navbar() {
   return (
     <>
-      <Link href="/">
-        <a>
-          <Logo />
-        </a>
-      </Link>
       <nav className={styles.nav}>
+        <Link href="/">
+          <a>
+            <Logo />
+          </a>
+        </Link>
+
         <ul>
           <li>
             <Link href="/posts">Posts</Link>
