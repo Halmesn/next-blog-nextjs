@@ -21,7 +21,7 @@ export async function getStaticPaths() {
     .map((slug) => {
       return {
         params: {
-          slug,
+          postSlug: slug,
         },
       };
     });
