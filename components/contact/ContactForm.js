@@ -4,7 +4,6 @@ import { useRef, useState } from 'react';
 
 export default function ContactForm({ showNotification }) {
   const [isInvalid, setIsInvalid] = useState(false);
-  console.log(process.env);
 
   const emailInputRef = useRef();
   const nameInputRef = useRef();
@@ -69,7 +68,7 @@ export default function ContactForm({ showNotification }) {
     sendContactForm({
       email: enteredEmail,
       name: enteredName,
-      text: enteredMessage,
+      message: enteredMessage,
     });
   }
 

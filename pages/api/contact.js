@@ -1,7 +1,7 @@
 import { connectDatabase, insertDocument } from 'utilities/MongoDb';
 
 async function handler(req, res) {
-  const { email, name, text } = req.body;
+  const { email, name, message } = req.body;
 
   let client;
 
@@ -13,8 +13,16 @@ async function handler(req, res) {
   }
 
   if (req.method === 'POST') {
-    if (!email || !email.includes('@')) {
-      res.status(422).json({ error: 'Invalid email address' });
+    if (
+      !email ||
+      email.trim() === '' ||
+      !email.includes('@') ||
+      !name ||
+      name.trim() === '' ||
+      !message ||
+      message.trim() === ''
+    ) {
+      res.status(422).json({ error: 'Invalid input!' });
       client.close();
       return;
     }
@@ -22,7 +30,7 @@ async function handler(req, res) {
     const formData = {
       email,
       name,
-      text,
+      message,
     };
 
     try {
