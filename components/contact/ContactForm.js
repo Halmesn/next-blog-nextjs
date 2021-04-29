@@ -1,10 +1,8 @@
 import styles from './ContactForm.module.css';
 
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 
 export default function ContactForm({ showNotification }) {
-  const [isInvalid, setIsInvalid] = useState(false);
-
   const emailInputRef = useRef();
   const nameInputRef = useRef();
   const messageInputRef = useRef();
@@ -52,19 +50,6 @@ export default function ContactForm({ showNotification }) {
     const enteredName = nameInputRef.current.value;
     const enteredMessage = messageInputRef.current.value;
 
-    if (
-      !enteredEmail ||
-      enteredEmail.trim() === '' ||
-      !enteredEmail.includes('@') ||
-      !enteredName ||
-      enteredName.trim() === '' ||
-      !enteredMessage ||
-      enteredMessage.trim() === ''
-    ) {
-      setIsInvalid(true);
-      return;
-    }
-
     sendContactForm({
       email: enteredEmail,
       name: enteredName,
@@ -88,9 +73,14 @@ export default function ContactForm({ showNotification }) {
         </div>
         <div className={styles.control}>
           <label htmlFor="message">Your Message</label>
-          <textarea type="text" id="message" rows="5" ref={messageInputRef} />
+          <textarea
+            type="text"
+            id="message"
+            rows="5"
+            ref={messageInputRef}
+            required
+          />
         </div>
-        {isInvalid && <p>Please enter a valid email address and message!</p>}
         <div className={styles.actions}>
           <button>Send Message</button>
         </div>
