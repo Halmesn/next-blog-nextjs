@@ -29,4 +29,4 @@ For personal future ref only.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[product-screenshot]: https://github.com/Halmesn/NextEvent/blob/main/public/images/NextEvent.png
+[product-screenshot]: https://github.com/Halmesn/next-blog-nextjs/blob/main/public/NextBlog.png
