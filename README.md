@@ -22,7 +22,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://next-blog-nextjs.vercel.app/)
 
-For personal future ref only.
+This project serves the purpose of future reference.(In other words, if I forget how to implement certain feature in the future I can take a look here!)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
