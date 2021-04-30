@@ -24,8 +24,6 @@
 
 For personal future ref only.
 
-**All the data is dummy data because I want to focus on learning nextjs features.**
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
